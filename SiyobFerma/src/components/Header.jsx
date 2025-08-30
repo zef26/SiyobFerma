@@ -8,7 +8,7 @@ const Header = () => {
 
       <div className='w-[80px] h-[80px]'>
         <a href="">
-        <img src="	https://siyobferma.uz/ru/wp-content/uploads/sites/2/2025/01/logo_Siyob.png" alt="Logo" />
+        <img src="src/assets/logo/logo_Siyob.png" alt="Logo" />
         </a>
       </div>
       <div>

@@ -7,6 +7,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import About from './components/About';
 import Partners from './components/Partners';
+import Answers from './components/Answers';
+import Blog from './components/Blog';
 
 function App() {
   useEffect(() => {
@@ -20,6 +22,8 @@ function App() {
     <Banner />
     <About/>
     <Partners/>
+    <Answers/>
+    <Blog/>
   </div>
   );
 }
