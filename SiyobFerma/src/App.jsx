@@ -24,6 +24,7 @@ function App() {
     <Partners/>
     <Answers/>
     <Blog/>
+    
   </div>
   );
 }
