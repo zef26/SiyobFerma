@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <>
     
-    <div data-aos="zoom-in"  className= ' h-[500px]  relative mt-10 overflow-hidden rounded-3xl' >
+    <div data-aos="zoom-in"  className= ' h-[500px]  relative mt-[100px] overflow-hidden rounded-3xl' >
 
       <img className= 'w-full object-cover' src="src/assets/Site-Header.jpg" alt="siyob" />
       

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react"; 
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqData = [
   {
@@ -9,20 +9,22 @@ const faqData = [
   },
   {
     question: "Siyob Ferma tovuqlarining boshqalardan farqi nimada?",
-    answer: "Biz broyler jo'jalarini hali kichikligidayoq sotuvga chiqaramiz. Aynan shuning uchun Siyob Ferma tovuqlari yumshoqqina va mazali bo'ladi!"
+    answer:
+      "Biz broyler jo'jalarini hali kichikligidayoq sotuvga chiqaramiz. Aynan shuning uchun Siyob Ferma tovuqlari yumshoqqina va mazali bo'ladi!"
   },
   {
     question: "Siyob Ferma qayerda joylashgan?",
-    answer: "Bizning fermamiz Samarqand viloyatining, Toyloq tumanida joylashgan. Deyarli barcha viloyatlarda dilerlarimiz mavjud!"
+    answer:
+      "Bizning fermamiz Samarqand viloyatining, Toyloq tumanida joylashgan. Deyarli barcha viloyatlarda dilerlarimiz mavjud!"
   },
   {
     question: "Sizlar bilan ishlashim uchun nima qilishim kerak?",
-    answer: "Biz bilan bog'laning. Ko'rsatilgan raqamlarga qo'ng'iroq qiling, yoki biz bilan aloqa bo'limida o'z raqamingizni bizga yuboring!"
+    answer:
+      "Biz bilan bog'laning. Ko'rsatilgan raqamlarga qo'ng'iroq qiling, yoki biz bilan aloqa bo'limida o'z raqamingizni bizga yuboring!"
   }
 ];
 
 const Answers = () => {
-  
   const [openIndex, setOpenIndex] = useState(0);
 
   const toggleAnswer = (index) => {
@@ -31,8 +33,8 @@ const Answers = () => {
 
   return (
     <div className="max-w-[1200px] mx-auto flex gap-[40px] justify-center items-start mt-[126px]">
-      
-      <div data-aos="fade-right" className="w-[541px] h-[541px] flex-shrink-0 ">
+      {/* Левая картинка */}
+      <div data-aos="fade-right" className="w-[541px] h-[541px] flex-shrink-0">
         <img
           src="src/assets/msg.png"
           alt="Savollar illustration"
@@ -40,18 +42,18 @@ const Answers = () => {
         />
       </div>
 
-      
+      {/* Правая часть */}
       <div data-aos="fade-left" className="flex-1">
         <h3 className="text-[55px] font-bold leading-tight mb-10">
           KO'P BERILADIGAN SAVOLLAR
         </h3>
 
-        <div   className="space-y-4">
+        <div className="space-y-4">
           {faqData.map((item, index) => (
             <div key={index} className="rounded-2xl">
-           
+              {/* Вопрос */}
               <button
-                className="w-full text-left p-4 font-semibold text-[17px] flex justify-between items-center border border-[#EAEAEA] rounded-xl "
+                className="w-full text-left p-4 font-semibold text-[17px] flex justify-between items-center border border-[#EAEAEA] rounded-xl"
                 onClick={() => toggleAnswer(index)}
               >
                 {item.question}
@@ -62,16 +64,18 @@ const Answers = () => {
                 )}
               </button>
 
-             
+              {/* Ответ с плавной анимацией без дергания */}
               <div
-                className={`transition-all duration-500 ease-in-out ${
+                className={`grid transition-all duration-500 ease-in-out ${
                   openIndex === index
-                    ? "max-h-[300px] opacity-100 mt-2"
-                    : "max-h-0 opacity-0"
+                    ? "grid-rows-[1fr] opacity-100 mt-2"
+                    : "grid-rows-[0fr] opacity-0"
                 } overflow-hidden`}
               >
-                <div className="p-4 bg-white border border-[#EAEAEA] rounded-xl text-[#777]">
-                  {item.answer}
+                <div className="overflow-hidden">
+                  <div className="p-4 bg-white border border-[#EAEAEA] rounded-xl text-[#777]">
+                    {item.answer}
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,46 +1,85 @@
-import React from 'react'
-import ReacCountryFlag from 'react-country-flag'
-import { ChevronDown } from "lucide-react";
+import React, { useState } from "react";
+import ReacCountryFlag from "react-country-flag";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className='flex items-center justify-between  '>
+    <header className="w-full fixed z-50 bg-white left-0 top-0 ">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 lg:py-4">
+        {/* Лого */}
+        <div className="w-[70px] h-[70px] flex-shrink-0">
+          <a href="/">
+            <img
+              src="src/assets/logo/logo_Siyob.png"
+              alt="Logo"
+              className="w-full h-full object-contain"
+            />
+          </a>
+        </div>
 
-      <div className='w-[80px] h-[80px]'>
-        <a href="">
-        <img src="src/assets/logo/logo_Siyob.png" alt="Logo" />
-        </a>
-      </div>
-      <div>
-        <nav className='flex items-center gap-[25px]'>
-            <ul className='flex gap-[25px] text-[17px] font-medium [&>li]:cursor-pointer [&>li]:hover:text-[#009440] [&>li]:transition duration-300 '>
-                <li >Bosh sahifa</li>
-                <li>Siyob Ferma haqida</li>
-                <li>Mahsulotlar</li>
-                <li>Blog</li>
-                <li>Kontaktlar</li>
-            </ul>
+        {/* Навигация (desktop) */}
+        <nav className="hidden lg:flex items-center gap-6">
+          <ul className="flex gap-6 text-[16px] font-medium [&>li]:cursor-pointer [&>li]:hover:text-[#009440] [&>li]:transition">
+            <li>Bosh sahifa</li>
+            <li>Siyob Ferma haqida</li>
+            <li>Mahsulotlar</li>
+            <li>Blog</li>
+            <li>Kontaktlar</li>
+          </ul>
 
-            <div className='flex-1 cursor-pointer'>
-                <div className='flex items-center gap-2'>
-                    <ReacCountryFlag countryCode='UZ' svg/> 
-                    <span className='text-[18px] font-medium text-[#009440]'>UZ</span>
-                    <ChevronDown className="w-5 h-5 text-[#009440]" />
-                </div>
-
-                <div className='w-[50px] h-[1.5px] bg-[#009440]' ></div>
+          {/* Язык */}
+          <div className="flex flex-col items-center cursor-pointer ml-4">
+            <div className="flex items-center gap-2">
+              <ReacCountryFlag countryCode="UZ" svg />
+              <span className="text-[16px] font-medium text-[#009440]">UZ</span>
+              <ChevronDown className="w-4 h-4 text-[#009440]" />
             </div>
-
+            <div className="w-[40px] h-[1.5px] bg-[#009440]" />
+          </div>
         </nav>
 
+        {/* Кнопка (desktop) */}
+        <div className="hidden lg:block">
+          <button className="bg-[#009440] py-2 px-6 rounded-[36px] text-white font-medium text-[15px] hover:bg-[#066a31] transition">
+            <a href="tel:+998781221007">+998 78 122 10 07</a>
+          </button>
+        </div>
+
+        {/* Бургер (mobile) */}
+        <button
+          className="lg:hidden p-2 text-[#009440]"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
-      <div>
-        <button className='bg-[#009440] py-[10px] px-[24px] rounded-[36px] text-white font-medium text-[15px] cursor-pointer hover:bg-[#066a31] transition duration-300'><a href="tel:+998781221007">+998 78 122 10 07</a></button>
-      </div>
 
-    </div>
+      {/* Мобильное меню */}
+      {isOpen && (
+        <div className="lg:hidden bg-white border-t shadow-md px-4 py-6 space-y-4">
+          <ul className="flex flex-col gap-4 text-[16px] font-medium [&>li]:cursor-pointer [&>li]:hover:text-[#009440]">
+            <li>Bosh sahifa</li>
+            <li>Siyob Ferma haqida</li>
+            <li>Mahsulotlar</li>
+            <li>Blog</li>
+            <li>Kontaktlar</li>
+          </ul>
 
-  )
-}
+          <div className="flex items-center gap-2 pt-4 border-t">
+            <ReacCountryFlag countryCode="UZ" svg />
+            <span className="text-[16px] font-medium text-[#009440]">UZ</span>
+            <ChevronDown className="w-4 h-4 text-[#009440]" />
+          </div>
 
-export default Header
+          <button className="mt-4 w-full bg-[#009440] py-2 rounded-[36px] text-white font-medium text-[15px] hover:bg-[#066a31] transition">
+            <a href="tel:+998781221007">+998 78 122 10 07</a>
+          </button>
+        </div>
+      )}
+    </header>
+  );
+};
+
+export default Header;

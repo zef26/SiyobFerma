@@ -9,6 +9,8 @@ import About from './components/About';
 import Partners from './components/Partners';
 import Answers from './components/Answers';
 import Blog from './components/Blog';
+import Tips from './components/Tips';
+import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
@@ -20,10 +22,13 @@ function App() {
   <div className='pt-10 px-5 container  mx-auto'>
     <Header />
     <Banner />
-    <About/>
-    <Partners/>
-    <Answers/>
-    <Blog/>
+    {/* <About/> */}
+    {/* <Partners/> */}
+    {/* <Answers/> */}
+    {/* <Blog/> */}
+    {/* <Tips/> */}
+    {/* <Footer/> */}
+    
   </div>
   );
 }
