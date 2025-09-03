@@ -1,16 +1,14 @@
 import React from 'react'
 import Header from './components/Header';
-import Banner from './components/Banner';
+
 
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import About from './components/About';
-import Partners from './components/Partners';
-import Answers from './components/Answers';
-import Blog from './components/Blog';
-import Tips from './components/Tips';
-import Footer from './components/Footer';
+// import {Route, Routes, Link} from 'react-router-dom'
+import FirstPage from './components/Pages/FirstPage';
+
+
 
 function App() {
   useEffect(() => {
@@ -18,19 +16,17 @@ function App() {
   }, []);
 
 
-  return (
-  <div className='pt-10 px-5 container  mx-auto'>
+ return (
+  <div>
     <Header />
-    {/* <Banner /> */}
-    {/* <About/> */}
-    {/* <Partners/> */}
-    {/* <Answers/> */}
-    {/* <Blog/> */}
-    {/* <Tips/> */}
-    {/* <Footer/> */}
-    
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+        <FirstPage/>
+      
+      
+    </div>
   </div>
-  );
+);
+
 }
 
 

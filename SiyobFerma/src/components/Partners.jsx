@@ -7,7 +7,10 @@
     const Partners = () => {
     return (
         <div className="m-auto mt-[110px] w-full">
-        <h3 className="text-[55px] text-center font-bold">HAMKORLARIMIZ</h3>
+        <h3 className="text-center font-bold leading-tight 
+  text-[22px] sm:text-[28px] md:text-[36px] lg:text-[45px] xl:text-[55px]">
+  HAMKORLARIMIZ
+</h3>
 
         <Swiper
             

@@ -1,44 +1,58 @@
-import React from 'react'
-import Icon from '@mdi/react';
-import { mdiFoodHalal, mdiKnife } from '@mdi/js';
-import { House } from 'lucide-react';
+import React from "react";
+import Icon from "@mdi/react";
+import { mdiFoodHalal, mdiKnife } from "@mdi/js";
+import { House } from "lucide-react";
 
 const Banner = () => {
   return (
     <>
-    
-    <div data-aos="zoom-in"  className= ' h-[500px]  relative mt-[100px] overflow-hidden rounded-3xl' >
+      {/* Hero section */}
+      <div data-aos="zoom-in" className="relative w-full mt-[75px] overflow-hidden rounded-3xl">
+        <img
+          src="src/assets/Site-Header.jpg"
+          alt="siyob"
+          className="w-full h-auto max-h-[700px] object-cover rounded-3xl"
+        />
 
-      <img className= 'w-full object-cover' src="src/assets/Site-Header.jpg" alt="siyob" />
-      
-        <div className='absolute z-20 top-[130px] left-[50px]'>
-            <h1 className='text-white text-[55px] leading-tight font-bold'>Siyob Ferma — <br/> Sog'lom hayot uchun <br/> Sifatli mahsulot! </h1>
-            <button className= ' bg-[#009440] py-[10px] px-[24px] rounded-[36px] text-white font-medium text-[15px] cursor-pointer mt-5 hover:bg-[#066a31] transition duration-300'>Biz haqimizda</button>
+        {/* Текст поверх */}
+        <div className="absolute inset-0 flex flex-col justify-center items-start px-4 sm:px-8 md:px-16 lg:px-20">
+          <h1 className="text-white font-bold leading-snug text-[16px] sm:text-[28px] md:text-[36px] lg:text-[48px] xl:text-[55px] max-w-full sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%]">
+            Siyob Ferma — <br /> Sog'lom hayot uchun <br /> Sifatli mahsulot!
+          </h1>
+          <button className="mt-4 rounded-full bg-[#009440] px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] text-white font-medium hover:bg-[#066a31] transition-colors duration-300">
+            Biz haqimizda
+          </button>
         </div>
       </div>
 
-      <div className='flex justify-between items-center [&>div]:flex [&>div]:items-center [&>div]:gap-[25px] mt-[25px] pr-10 pl-10 '>
-        <div data-aos="fade-right">
-            <div  className='w-[50px] h-[50px] rounded-full bg-[#009440] flex items-center justify-center  '>
-                <Icon path={mdiFoodHalal} size={1} color="white" />
-            </div>
-            <span className='font-normal text-[20px]'>Halol mahsulot</span>
+      {/* Features */}
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+        {/* Item 1 */}
+        <div data-aos="fade-right" className="flex flex-col items-center gap-3">
+          <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#009440]">
+            <Icon path={mdiFoodHalal} color="white" className="h-6 w-6" />
+          </div>
+          <span className="text-[16px] xl:text-[20px] text-center">Halol mahsulot</span>
         </div>
-        <div data-aos="fade-up">
-            <div className='w-[50px] h-[50px] rounded-full bg-[#009440] flex items-center justify-center  '>
-                <House className='text-white'/>
-            </div>
-            <span className='font-normal text-[20px]'>100% o'zimizda yetishtiriladi</span>
-        </div>
-        <div data-aos="fade-left">
-            <div className='w-[50px] h-[50px] rounded-full bg-[#009440] flex items-center justify-center  '>
-                <Icon path={mdiKnife} size={1} color={"white"} />
-            </div>
-            <span className='font-normal text-[20px]'>Qo'lda so'yiladi</span>
-        </div>
-      </div> 
-    </>
-  )
-}
 
-export default Banner
+        {/* Item 2 */}
+        <div data-aos="fade-up" className="flex flex-col items-center gap-3">
+          <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#009440]">
+            <House className="h-6 w-6 text-white" />
+          </div>
+          <span className="text-[16px] xl:text-[20px] text-center">100% o'zimizda yetishtiriladi</span>
+        </div>
+
+        {/* Item 3 */}
+        <div data-aos="fade-left" className="flex flex-col items-center gap-3">
+          <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#009440]">
+            <Icon path={mdiKnife} color="white" className="h-6 w-6" />
+          </div>
+          <span className="text-[16px] xl:text-[20px] text-center">Qo'lda so'yiladi</span>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Banner;

@@ -32,9 +32,12 @@ const Answers = () => {
   };
 
   return (
-    <div className="max-w-[1200px] mx-auto flex gap-[40px] justify-center items-start mt-[126px]">
+    <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-[60px] items-center lg:items-start justify-between mt-[100px] px-4">
       {/* Левая картинка */}
-      <div data-aos="fade-right" className="w-[541px] h-[541px] flex-shrink-0">
+      <div
+        data-aos="fade-right"
+        className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px] xl:w-[500px] xl:h-[500px] flex-shrink-0"
+      >
         <img
           src="src/assets/msg.png"
           alt="Savollar illustration"
@@ -43,8 +46,11 @@ const Answers = () => {
       </div>
 
       {/* Правая часть */}
-      <div data-aos="fade-left" className="flex-1">
-        <h3 className="text-[55px] font-bold leading-tight mb-10">
+      <div
+        data-aos="fade-left"
+        className="flex-1 w-full max-w-[650px] lg:self-center"
+      >
+        <h3 className="text-[28px] sm:text-[36px] lg:text-[44px] xl:text-[55px] font-bold leading-tight mb-10 text-center lg:text-left">
           KO'P BERILADIGAN SAVOLLAR
         </h3>
 
@@ -53,7 +59,7 @@ const Answers = () => {
             <div key={index} className="rounded-2xl">
               {/* Вопрос */}
               <button
-                className="w-full text-left p-4 font-semibold text-[17px] flex justify-between items-center border border-[#EAEAEA] rounded-xl"
+                className="w-full text-left p-4 font-semibold text-[15px] sm:text-[16px] lg:text-[17px] flex justify-between items-center border border-[#EAEAEA] rounded-xl"
                 onClick={() => toggleAnswer(index)}
               >
                 {item.question}
@@ -64,7 +70,7 @@ const Answers = () => {
                 )}
               </button>
 
-              {/* Ответ с плавной анимацией без дергания */}
+              {/* Ответ */}
               <div
                 className={`grid transition-all duration-500 ease-in-out ${
                   openIndex === index
@@ -73,7 +79,7 @@ const Answers = () => {
                 } overflow-hidden`}
               >
                 <div className="overflow-hidden">
-                  <div className="p-4 bg-white border border-[#EAEAEA] rounded-xl text-[#777]">
+                  <div className="p-4 bg-white border border-[#EAEAEA] rounded-xl text-[#777] text-[14px] sm:text-[15px] lg:text-[16px] leading-relaxed">
                     {item.answer}
                   </div>
                 </div>
