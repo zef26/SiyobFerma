@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReacCountryFlag from "react-country-flag";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,12 @@ const Header = () => {
         {/* Навигация (desktop) */}
         <nav className="hidden lg:flex items-center gap-6">
           <ul className="flex gap-6 text-[16px] font-medium [&>li]:cursor-pointer [&>li]:hover:text-[#009440] [&>li]:transition">
-            <li>Bosh sahifa</li>
+            <li>
+              <Link href="/">
+              Bosh sahifa
+              </Link>
+              
+              </li>
             <li>Siyob Ferma haqida</li>
             <li>Mahsulotlar</li>
             <li>Blog</li>
