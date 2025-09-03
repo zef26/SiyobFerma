@@ -5,7 +5,7 @@ import Header from './components/Header';
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import {Route, Routes, Link} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FirstPage from './components/Pages/FirstPage';
 
 
