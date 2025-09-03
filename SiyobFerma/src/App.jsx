@@ -21,7 +21,7 @@ function App() {
   return (
   <div className='pt-10 px-5 container  mx-auto'>
     <Header />
-    <Banner />
+    {/* <Banner /> */}
     {/* <About/> */}
     {/* <Partners/> */}
     {/* <Answers/> */}
