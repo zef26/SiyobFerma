@@ -7,7 +7,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full fixed z-50 bg-white left-0 top-0 shadow-sm">
+    <header className="w-full   bg-white ">
       <div className="mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3 lg:py-4">
         {/* Лого */}
         <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0">

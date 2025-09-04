@@ -19,16 +19,15 @@ function App() {
  return (
   <Router>
     <div>
-    <Header />
+    
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+      <Header />
       <Routes>
 
         <Route path="/" element={<FirstPage />} />
 
       </Routes>
-        
-      
-      
+          
     </div>
   </div>
   </Router>
