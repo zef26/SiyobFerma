@@ -5,7 +5,7 @@ import Answers from '../Answers';
 import Blog from '../Blog';
 import Tips from '../Tips';
 import Banner from '../Banner';
-import Footer from '../Footer';
+
 
 const FirstPage = () => {
   return (
@@ -16,7 +16,6 @@ const FirstPage = () => {
       <Answers/>
       <Blog/>
       <Tips/>
-      <Footer/>
     </div>
   )
 }

@@ -1,42 +1,47 @@
 import React, { useState } from "react";
 import ReacCountryFlag from "react-country-flag";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
+import { navLinkStyle } from "./helpers/navLinkStyle";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full   bg-white ">
-      <div className="mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3 lg:py-4">
+    <header className="w-full bg-white ">
+      <div className="flex items-center justify-between px-4 py-3 mx-auto sm:px-6 lg:px-8 lg:py-4">
         {/* Лого */}
-        <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0">
+        <div className="flex-shrink-0 w-14 h-14 sm:w-[85px] sm:h-[85px]">
           <a href="/">
             <img
               src="src/assets/logo/logo_Siyob.png"
               alt="Logo"
-              className="w-full h-full object-contain"
+              className="object-contain w-full h-full"
             />
           </a>
         </div>
 
         {/* Навигация (desktop) */}
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="items-center hidden gap-6 lg:flex">
           <ul className="flex gap-6 text-[16px] font-medium [&>li]:cursor-pointer [&>li]:hover:text-[#009440] [&>li]:transition">
             <li>
-              <Link href="/">
-              Bosh sahifa
-              </Link>
-              
-              </li>
-            <li>Siyob Ferma haqida</li>
-            <li>Mahsulotlar</li>
+              <NavLink end style={navLinkStyle} to="/">
+                Bosh sahifa
+              </NavLink>
+            </li>
+            <li>
+              <NavLink end style={navLinkStyle}  to="/siyob-ferma-haqida">Siyob Ferma haqida</NavLink>
+            </li>
+            <li>
+              <NavLink end style={navLinkStyle}  to="/mahsulotlarimiz">Mahsulotlar</NavLink>
+            </li>
             <li>Blog</li>
             <li>Kontaktlar</li>
           </ul>
 
           {/* Язык */}
-          <div className="flex flex-col items-center cursor-pointer ml-4">
+          <div className="flex flex-col items-center ml-4 cursor-pointer">
             <div className="flex items-center gap-2">
               <ReacCountryFlag countryCode="UZ" svg />
               <span className="text-[16px] font-medium text-[#009440]">UZ</span>
@@ -68,11 +73,19 @@ const Header = () => {
           isOpen ? "max-h-[500px] opacity-100 py-4" : "max-h-0 opacity-0 py-0"
         }`}
       >
-        <div className="bg-white border-t shadow-md px-4 flex flex-col gap-4">
+        <div className="flex flex-col gap-4 px-4 bg-white border-t shadow-md">
           <ul className="flex flex-col gap-4 text-[16px] font-medium [&>li]:cursor-pointer [&>li]:hover:text-[#009440]">
-            <li>Bosh sahifa</li>
-            <li>Siyob Ferma haqida</li>
-            <li>Mahsulotlar</li>
+            <li>
+              <NavLink end style={navLinkStyle} to="/">
+                Bosh sahifa
+              </NavLink>
+            </li>
+            <li>
+              <NavLink end style={navLinkStyle}  to="/siyob-ferma-haqida">Siyob Ferma haqida</NavLink>
+            </li>
+            <li>
+              <NavLink end style={navLinkStyle}  to="/Mahsulotlar">mahsulotlar</NavLink>
+            </li>
             <li>Blog</li>
             <li>Kontaktlar</li>
           </ul>
