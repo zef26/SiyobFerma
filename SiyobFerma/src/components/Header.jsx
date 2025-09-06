@@ -31,7 +31,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink end style={navLinkStyle}  to="/siyob-ferma-haqida">Siyob Ferma haqida</NavLink>
+              <NavLink end style={navLinkStyle}  to="/siyob-ferma-haqida">Biz haqimizda</NavLink>
             </li>
             <li>
               <NavLink end style={navLinkStyle}  to="/mahsulotlarimiz">Mahsulotlar</NavLink>
@@ -81,7 +81,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink end style={navLinkStyle}  to="/siyob-ferma-haqida">Siyob Ferma haqida</NavLink>
+              <NavLink end style={navLinkStyle}  to="/siyob-ferma-haqida">Biz haqimizda</NavLink>
             </li>
             <li>
               <NavLink end style={navLinkStyle}  to="/Mahsulotlar">mahsulotlar</NavLink>

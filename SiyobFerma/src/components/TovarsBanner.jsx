@@ -4,7 +4,7 @@ const TovarsBanner = () => {
   return (
     <div
       data-aos="zoom-in"
-      className="relative w-full mt-[75px] overflow-hidden rounded-3xl"
+      className="relative w-full mt-[25px] overflow-hidden rounded-3xl"
     >
       {/* Фон баннер */}
       <img

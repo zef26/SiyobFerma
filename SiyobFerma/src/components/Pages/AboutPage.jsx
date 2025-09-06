@@ -3,11 +3,12 @@ import AboutMain from '../AboutMain'
 import About from '../About'
 import Answers from '../Answers'
 import AboutInfo from '../AboutInfo'
+import Banner from '../Banner'
 
 const AboutPage = () => {
   return (
     <div>
-      <AboutMain/>
+      <Banner />
       <About/>
       <AboutInfo/>
       <Answers/>

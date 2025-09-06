@@ -4,17 +4,18 @@ import Partners from '../Partners';
 import Answers from '../Answers';
 import Blog from '../Blog';
 import Tips from '../Tips';
-import Banner from '../Banner';
+import AboutMain from '../AboutMain';
 
 
 const FirstPage = () => {
   return (
     <div>
-      <Banner />
+      
+      <AboutMain/>
       <About/>
-      <Partners/>
+      {/* <Partners/> */}
       <Answers/>
-      <Blog/>
+      {/* <Blog/> */}
       <Tips/>
     </div>
   )
