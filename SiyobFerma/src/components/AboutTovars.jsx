@@ -143,7 +143,7 @@ const AboutTovars = () => {
           >
             <div className="overflow-hidden rounded-3xl">
               <img
-                className="object-cover duration-300 hover:scale-110"
+                className="object-cover duration-300 hover:scale-110" 
                 src={item.img}
                 alt="tovar"
               />

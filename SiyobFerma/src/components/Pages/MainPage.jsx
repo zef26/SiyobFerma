@@ -5,6 +5,7 @@ import Answers from '../Answers';
 import Blog from '../Blog';
 import Tips from '../Tips';
 import AboutMain from '../AboutMain';
+import Sertificats from '../Sertificats';
 
 
 const FirstPage = () => {
@@ -14,6 +15,7 @@ const FirstPage = () => {
       <AboutMain/>
       <About/>
       {/* <Partners/> */}
+      <Sertificats/>
       <Answers/>
       {/* <Blog/> */}
       <Tips/>
