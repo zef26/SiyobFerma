@@ -43,6 +43,12 @@ const Footer = () => {
           <p className="text-[17px] sm:text-[19px] font-semibold">Kontaktlar:</p>
           <p className="text-[15px] sm:text-[17px] font-semibold">+998 78 122 10 07</p>
           <p className="text-[14px] sm:text-[16px] font-semibold truncate">siyobferma.uz@gmail.com</p>
+          <div className="flex gap-2 items-center justify-center  [&>div]:flex [&>div]:items-center [&>div]:justify-center [&>div]:w-[30px] [&>div]:h-[30px] [&>div]:rounded-full [&>div]:bg-[#009440] [&>div]:hover:bg-[#066a31] [&>div]:transition-colors [&>div]:duration-300 [&>div]:cursor-pointer [&>div]:hover:scale-[1.1] [&>div]:border-[2px] [&>div]:border-[white] [&>div>a>img]:w-[20px] [&>div>a>img]:h-[20px]  ">
+            <div><a href="https://www.instagram.com/siyobferma.uz/"><img src="/src/assets/icons/instagram.svg" alt="instagram" /></a></div>
+            <div><a href="https://www.facebook.com/siyobferma.uz"><img src="/src/assets/icons/facebook.svg" alt="facebook" /></a></div>
+            <div><a href="https://t.me/siyobferma_uz"><img src="/src/assets/icons/telegram.svg" alt="telegram" /></a></div>
+            <div><a href="https://www.youtube.com/@SiyobFerma"><img src="/src/assets/icons/youtube.svg" alt="youtube" /></a></div>
+          </div>
         </div>
 
         {/* Карта */}
