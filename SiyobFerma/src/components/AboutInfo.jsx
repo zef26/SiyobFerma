@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const AboutInfo = () => {
   return (
     <div className="mt-10 space-y-10">
-      {/* Текст + картинка */}
       <div className="flex flex-col items-center gap-10 p-6 lg:flex-row lg:gap-20 lg:p-10">
-        <div data-aos="fade-right" className="flex flex-col gap-5 [&>p]:text-base md:[&>p]:text-lg lg:[&>p]:text-[20px]">
+        <div
+          data-aos="fade-right"
+          className="flex flex-col gap-5 [&>p]:text-base md:[&>p]:text-lg lg:[&>p]:text-[20px]"
+        >
           <p>
             «SIYOB FERMA» Broyler tovuq go’shti ishlab chiqaruvchi korxonamiz
             Samargand viloyatida joylashgan bo’lib, bugungi kunda yuqori sifatli
@@ -33,15 +35,18 @@ const AboutInfo = () => {
             mahsulotdir.
           </p>
         </div>
-        <img data-aos="fade-left"
+        <img
+          data-aos="fade-left"
           src="src/assets/aboutimgs/about1.png"
           alt="ab1"
           className="rounded-3xl w-full max-w-[400px] object-cover"
         />
       </div>
 
-      {/* Блок из 3 картинок */}
-      <div data-aos="fade-up" className="grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 lg:grid-cols-3 lg:p-10">
+      <div
+        data-aos="fade-up"
+        className="grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 lg:grid-cols-3 lg:p-10"
+      >
         <img
           src="src/assets/aboutimgs/about2.png"
           alt="ab2"
@@ -59,7 +64,7 @@ const AboutInfo = () => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutInfo
+export default AboutInfo;

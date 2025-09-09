@@ -79,8 +79,10 @@ const AboutTovars = () => {
   return (
     <div className="mt-20">
       <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-16">
-        {/* Левая часть — картинка + характеристики */}
-        <div data-aos="fade-right" className="flex flex-col items-center lg:w-2/5">
+        <div
+          data-aos="fade-right"
+          className="flex flex-col items-center lg:w-2/5"
+        >
           <img
             src="/src/assets/tovars/tushka.png"
             alt="Siyob Ferma broyler jo'ja"
@@ -90,7 +92,6 @@ const AboutTovars = () => {
             Broyler jo'ja go'shti (butun)
           </h3>
 
-          {/* Характеристики */}
           <div className="flex flex-col items-center w-full max-w-md gap-3 mt-5 sm:flex-row sm:justify-between">
             <p className="flex items-center gap-2 text-lg">
               <ListFilter size={28} color="green" /> 1 - 7 kategoriya
@@ -101,7 +102,6 @@ const AboutTovars = () => {
           </div>
         </div>
 
-        {/* Правая часть — описание */}
         <div data-aos="fade-left" className="lg:w-3/5">
           <h3 className="text-[22px] font-bold leading-snug md:text-4xl">
             Siyob Ferma broyler jo'ja mahsulotlari
@@ -124,17 +124,16 @@ const AboutTovars = () => {
             </p>
           </div>
 
-          {/* Кнопка */}
           <button className="mt-8 rounded-full bg-[#009440] px-6 py-3 text-base md:text-lg lg:text-xl font-medium text-white transition-colors duration-300 hover:bg-[#066a31]">
             Savdo bo'limi bilan bog'lanish
           </button>
         </div>
       </div>
 
-      {/* Карточки */}
-      <div  className="flex flex-wrap justify-center gap-6 pt-10 mt-20">
+      <div className="flex flex-wrap justify-center gap-6 pt-10 mt-20">
         {products.map((item) => (
-          <div data-aos="fade-up"
+          <div
+            data-aos="fade-up"
             key={item.id}
             className="
               shadow rounded-4xl bg-[#009440] flex flex-col pb-10
@@ -143,7 +142,7 @@ const AboutTovars = () => {
           >
             <div className="overflow-hidden rounded-3xl">
               <img
-                className="object-cover duration-300 hover:scale-110" 
+                className="object-cover duration-300 hover:scale-110"
                 src={item.img}
                 alt="tovar"
               />

@@ -8,7 +8,7 @@ const Footer = () => {
       className="mt-32 sm:mt-36 md:mt-40 w-full bg-gradient-to-br from-[#004435] to-[#00853E] rounded-t-4xl text-[#bfc1c1] px-4 sm:px-6 md:px-10 lg:px-[70px] py-10"
     >
       <div className="max-w-[1500px] mx-auto flex flex-wrap justify-center md:justify-between gap-10 text-center md:text-left">
-        {/* Лого */}
+      
         <div className="flex-1 min-w-[200px]">
           <img
             className="mx-auto md:mx-0 w-[90px] sm:w-[110px] xl:w-[130px]"
@@ -22,7 +22,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Навигация */}
         <div className="flex-1 min-w-[160px] flex flex-col gap-2 sm:gap-3 font-semibold">
           <a className="text-[15px] sm:text-[17px] xl:text-[20px] hover:text-white transition" href="">
             Siyob Ferma haqida
@@ -38,7 +37,7 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Контакты */}
+    
         <div className="flex-1 min-w-[160px] flex flex-col gap-1 sm:gap-2">
           <p className="text-[17px] sm:text-[19px] font-semibold">Kontaktlar:</p>
           <p className="text-[15px] sm:text-[17px] font-semibold">+998 78 122 10 07</p>
@@ -51,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Карта */}
+   
         <div className="w-full sm:flex-1 sm:min-w-[260px] sm:max-w-[400px] aspect-[16/9] rounded-xl overflow-hidden shadow-lg">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3072.9727499337023!2d67.06860767639805!3d39.627817403276495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d215ed348cbe7%3A0xeeb42186879b3408!2sSiyob%20Ferma!5e0!3m2!1sru!2s!4v1756805672556!5m2!1sru!2s"

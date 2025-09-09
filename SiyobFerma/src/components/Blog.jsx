@@ -10,7 +10,6 @@ const Blog = () => {
         Qimmatli maslahatlar va maxsus retseptlar
       </p>
 
-      {/* Карточки */}
       <div
         data-aos="fade-left"
         className="mt-[60px] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"
@@ -64,7 +63,6 @@ const Blog = () => {
         </div>
       </div>
 
-      {/* Кнопка */}
       <div className="w-full flex justify-center mt-[50px]">
         <button className="bg-[#009440] py-[10px] px-[24px] rounded-[36px] text-white font-medium text-[15px] sm:text-[17px] hover:bg-[#066a31] transition duration-300 cursor-pointer">
           Barchasini ko'rish

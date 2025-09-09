@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const About = () => {
   return (
@@ -8,7 +8,6 @@ const About = () => {
       </h2>
 
       <div className="mt-8 flex flex-col items-center gap-6 md:mt-[30px] md:flex-row md:justify-between">
-        {/* Text block */}
         <div
           data-aos="fade-right"
           className="w-full md:w-[48%] lg:w-[45%] bg-[#004435] text-white rounded-3xl p-6 sm:p-8 lg:p-12 md:h-[540px] flex flex-col"
@@ -19,15 +18,14 @@ const About = () => {
           <p className="mt-4 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] leading-relaxed">
             «SIYOB FERMA» Tovuq go’shti ishlab chiqaruvchi korxona Samarqand
             viloyatida joylashgan bo’lib bugungi kunda yuqori sifatli tovuq
-            go’shti mahsulotlari ishlab chiqarish va sotishda yetakchi o’rinlarni
-            egallab kelmoqda.
+            go’shti mahsulotlari ishlab chiqarish va sotishda yetakchi
+            o’rinlarni egallab kelmoqda.
           </p>
           <button className="mt-auto self-start rounded-full bg-[#009440] px-6 py-2 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-medium text-white transition-colors duration-300 hover:bg-[#066a31]">
             Ko'proq ma'lumot olish
           </button>
         </div>
 
-        {/* Image block */}
         <div data-aos="fade-left" className="w-full md:w-[48%] lg:w-[50%]">
           <img
             src="src/assets/About.jpg"
@@ -37,7 +35,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

@@ -2,12 +2,13 @@ import React from 'react'
 
 const Sertificats = () => {
   return (
-    <div className="px-4 mt-20 md:px-10 lg:px-20">
+    <div  className="px-4 mt-20 md:px-10 lg:px-20">
       <h3 className="text-[28px] sm:text-[36px] md:text-[45px] lg:text-[55px] font-bold text-center">
         Sertifikatlar
       </h3>
 
       <div
+        data-aos="fade-right"
         className="flex flex-wrap items-center justify-between mt-20 "
       >
         <img

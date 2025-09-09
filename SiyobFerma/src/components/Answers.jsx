@@ -5,23 +5,23 @@ const faqData = [
   {
     question: "Siyob Ferma tovuqlari halolmi?",
     answer:
-      "Albatta! Siyob Ferma xalqaro halol sertifikatiga ega va halollik talablariga qat'iy rioya qiladi!"
+      "Albatta! Siyob Ferma xalqaro halol sertifikatiga ega va halollik talablariga qat'iy rioya qiladi!",
   },
   {
     question: "Siyob Ferma tovuqlarining boshqalardan farqi nimada?",
     answer:
-      "Biz broyler jo'jalarini hali kichikligidayoq sotuvga chiqaramiz. Aynan shuning uchun Siyob Ferma tovuqlari yumshoqqina va mazali bo'ladi!"
+      "Biz broyler jo'jalarini hali kichikligidayoq sotuvga chiqaramiz. Aynan shuning uchun Siyob Ferma tovuqlari yumshoqqina va mazali bo'ladi!",
   },
   {
     question: "Siyob Ferma qayerda joylashgan?",
     answer:
-      "Bizning fermamiz Samarqand viloyatining, Toyloq tumanida joylashgan. Deyarli barcha viloyatlarda dilerlarimiz mavjud!"
+      "Bizning fermamiz Samarqand viloyatining, Toyloq tumanida joylashgan. Deyarli barcha viloyatlarda dilerlarimiz mavjud!",
   },
   {
     question: "Sizlar bilan ishlashim uchun nima qilishim kerak?",
     answer:
-      "Biz bilan bog'laning. Ko'rsatilgan raqamlarga qo'ng'iroq qiling, yoki biz bilan aloqa bo'limida o'z raqamingizni bizga yuboring!"
-  }
+      "Biz bilan bog'laning. Ko'rsatilgan raqamlarga qo'ng'iroq qiling, yoki biz bilan aloqa bo'limida o'z raqamingizni bizga yuboring!",
+  },
 ];
 
 const Answers = () => {
@@ -33,7 +33,6 @@ const Answers = () => {
 
   return (
     <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-[60px] items-center lg:items-start justify-between mt-[100px] px-4">
-      {/* Левая картинка */}
       <div
         data-aos="fade-right"
         className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px] xl:w-[500px] xl:h-[500px] flex-shrink-0"
@@ -41,11 +40,10 @@ const Answers = () => {
         <img
           src="src/assets/msg.png"
           alt="Savollar illustration"
-          className="w-full h-full object-contain"
+          className="object-contain w-full h-full"
         />
       </div>
 
-      {/* Правая часть */}
       <div
         data-aos="fade-left"
         className="flex-1 w-full max-w-[650px] lg:self-center"
@@ -57,7 +55,6 @@ const Answers = () => {
         <div className="space-y-4">
           {faqData.map((item, index) => (
             <div key={index} className="rounded-2xl">
-              {/* Вопрос */}
               <button
                 className="w-full text-left p-4 font-semibold text-[15px] sm:text-[16px] lg:text-[17px] flex justify-between items-center border border-[#EAEAEA] rounded-xl"
                 onClick={() => toggleAnswer(index)}
@@ -70,7 +67,6 @@ const Answers = () => {
                 )}
               </button>
 
-              {/* Ответ */}
               <div
                 className={`grid transition-all duration-500 ease-in-out ${
                   openIndex === index
